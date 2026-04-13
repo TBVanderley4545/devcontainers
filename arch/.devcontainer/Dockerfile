@@ -26,7 +26,6 @@ RUN pacman -S --noconfirm \
   ripgrep \
   sudo \
   tmux \
-  tree-sitter-cli \
   unzip \
   wget \
   zip \
