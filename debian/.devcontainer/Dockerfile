@@ -25,7 +25,6 @@ RUN apt install -y \
   ripgrep \
   sudo \
   tmux \
-  tree-sitter-cli \
   unzip \
   wget \
   zip \
