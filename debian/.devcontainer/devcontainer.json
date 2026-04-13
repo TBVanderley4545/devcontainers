@@ -1,0 +1,7 @@
+{
+  "$schema": "https://raw.githubusercontent.com/devcontainers/spec/refs/heads/main/schemas/devContainer.base.schema.json",
+  "name": "debian",
+  "workspaceFolder": "/home/developer/src",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "devcontainer"
+}
