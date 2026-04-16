@@ -13,6 +13,9 @@ services:
       - 3333:3333
     volumes:
       - type: bind
+        source: ~/.gitconfig
+        target: /home/developer/.gitconfig
+      - type: bind
         source: ..
         target: /home/developer/src/workspace
     tty: true
