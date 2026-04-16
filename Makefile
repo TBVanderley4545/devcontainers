@@ -36,4 +36,4 @@ stop-arch:
 	$(call base_stop,${ARCH_CONTAINER_NAME})
 
 stop-all:
-	$(call base_stop,${devcontainer})
+	$(call base_stop,devcontainer)
