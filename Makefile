@@ -9,7 +9,7 @@ define base_build
 	cd $(1) && devcontainer up --dotfiles-repository https://github.com/TBVanderley4545/devcontainer-dotfiles
 endef
 
-define base_use
+define base_run
 	cd $(1) && devcontainer exec zsh
 endef
 
@@ -24,10 +24,10 @@ build-arch:
 	$(call base_build,${ARCH_DIR})
 
 use-debian:
-	$(call base_use,${DEBIAN_DIR})
+	$(call base_build,${DEBIAN_DIR}) && $(call base_run,${DEBIAN_DIR})
 
 use-arch:
-	$(call base_use,${ARCH_DIR})
+	$(call base_build,${ARCH_DIR}) && $(call base_run,${ARCH_DIR})
 
 stop-debian:
 	$(call base_stop,${DEBIAN_CONTAINER_NAME})
