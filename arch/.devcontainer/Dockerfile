@@ -21,6 +21,7 @@ RUN pacman -S --noconfirm \
   lsd \
   man-pages \
   neovim \
+  openssh \
   pyenv \
   python \
   ripgrep \
