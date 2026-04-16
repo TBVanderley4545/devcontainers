@@ -11,6 +11,7 @@ RUN pacman -S --noconfirm \
   base-devel \
   bat \
   curl \
+  fastfetch \
   fzf \
   git \
   github-cli \
