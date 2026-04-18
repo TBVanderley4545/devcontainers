@@ -3,6 +3,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    environment:
+      - SSH_AUTH_SOCK=/ssh-agent
     ports:
       - 8080:8080
       - 5173:5173
@@ -15,6 +17,10 @@ services:
       - type: bind
         source: ~/.gitconfig
         target: /home/developer/.gitconfig
+        consistency: cached
+      - type: bind
+        source: $SSH_AUTH_SOCK
+        target: /ssh-agent
         consistency: cached
       - type: bind
         source: ..
