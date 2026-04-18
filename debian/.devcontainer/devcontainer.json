@@ -3,5 +3,14 @@
   "name": "debian",
   "workspaceFolder": "/home/developer/src",
   "dockerComposeFile": "docker-compose.yml",
-  "service": "devcontainer"
+  "service": "devcontainer",
+  "forwardPorts": [
+    8080,
+    5173,
+    9090,
+    6006,
+    3000,
+    4321,
+    3333
+  ]
 }

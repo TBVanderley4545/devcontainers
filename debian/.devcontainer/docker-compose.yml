@@ -5,14 +5,6 @@ services:
       dockerfile: Dockerfile
     environment:
       - SSH_AUTH_SOCK=/ssh-agent
-    ports:
-      - 8080:8080
-      - 5173:5173
-      - 9090:9090
-      - 6006:6006
-      - 3000:3000
-      - 4321:4321
-      - 3333:3333
     volumes:
       - type: bind
         source: ~/.gitconfig
