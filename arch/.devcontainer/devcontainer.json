@@ -1,9 +1,10 @@
 {
   "$schema": "https://raw.githubusercontent.com/devcontainers/spec/refs/heads/main/schemas/devContainer.base.schema.json",
   "name": "arch",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
   "workspaceFolder": "/home/developer/src",
-  "dockerComposeFile": "docker-compose.yml",
-  "service": "devcontainer",
   "forwardPorts": [
     8080,
     5173,
