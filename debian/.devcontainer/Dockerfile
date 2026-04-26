@@ -1,8 +1,8 @@
 FROM debian:latest
 
 # Define variables
-ARG USERNAME=developer
-ARG USER_PASSWORD=pass
+ARG CONTAINER_USER=developer
+ARG CONTAINER_USER_PASSWORD=pass
 
 # Initial System Setup
 RUN apt update
@@ -46,10 +46,10 @@ RUN make CMAKE_BUILD_TYPE=Release
 RUN make install
 
 # User setup
-RUN useradd -m -G sudo -s /bin/zsh $USERNAME
-RUN echo "$USERNAME:$USER_PASSWORD" | chpasswd
+RUN useradd -m -G sudo -s /bin/zsh $CONTAINER_USER
+RUN echo "$CONTAINER_USER:$CONTAINER_USER_PASSWORD" | chpasswd
 
 # Change to user and starting dir
-USER $USERNAME
-WORKDIR /home/$USERNAME
+USER $CONTAINER_USER
+WORKDIR /home/$CONTAINER_USER
 RUN mkdir src
